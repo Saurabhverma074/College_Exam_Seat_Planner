@@ -14,5 +14,3 @@ preferring lower-floor classrooms and minimizing the number of rooms used.
 - HTML
 - CSS
 - JavaScript
-
-## 📂 Project Structure
