@@ -1,6 +1,5 @@
 let classrooms = JSON.parse(localStorage.getItem('examSeatPlannerClassrooms')) || [];
 
-// NAVIGATION
 const navBtns = document.querySelectorAll('.nav-btn');
 const sections = document.querySelectorAll('.content-section');
 
@@ -18,7 +17,6 @@ navBtns.forEach(btn => {
     });
 });
 
-// ADD CLASSROOM
 document.getElementById('classroom-form').addEventListener('submit', e => {
     e.preventDefault();
 
@@ -38,7 +36,6 @@ document.getElementById('classroom-form').addEventListener('submit', e => {
     e.target.reset();
 });
 
-// VIEW CLASSROOMS
 const roomIdInput = document.getElementById('roomId');
 const capacityInput = document.getElementById('capacity');
 const floorNoInput = document.getElementById('floorNo');
@@ -78,7 +75,6 @@ window.deleteRoom = id => {
     renderClassrooms();
 };
 
-// ALLOCATION
 document.getElementById('allocate-btn').addEventListener('click', () => {
     let students = +document.getElementById('totalStudents').value;
     let sorted = [...classrooms].sort((a,b)=>a.floorNo-b.floorNo || b.capacity-a.capacity);

@@ -62,7 +62,7 @@ header p {
     color: white;
 }
 
-/* CONTENT */
+
 .content-section {
     display: none;
     background: white;
@@ -74,7 +74,6 @@ header p {
     display: block;
 }
 
-/* FORM */
 .form-group {
     margin-bottom: 20px;
 }
@@ -104,7 +103,6 @@ input {
     background: #3a5479;
 }
 
-/* TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -120,7 +118,6 @@ th, td {
     color: #777;
 }
 
-/* BADGES */
 .floor-badge {
     padding: 5px 10px;
     border-radius: 20px;
