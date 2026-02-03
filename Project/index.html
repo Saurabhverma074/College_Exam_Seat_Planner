@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Exam Seat Planner</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>College Exam Seat Planner</h1>
+        </header>
+
+        <nav class="main-nav">
+            <button class="nav-btn active" data-section="add-classroom">
+                <i class="fas fa-plus-circle"></i> Add Classroom
+            </button>
+            <button class="nav-btn" data-section="view-classrooms">
+                <i class="fas fa-list"></i> View Classrooms
+            </button>
+            <button class="nav-btn" data-section="allocate-exam">
+                <i class="fas fa-chair"></i> Allocate Exam Seats
+            </button>
+        </nav>
+
+        <!-- Add Classroom -->
+        <section id="add-classroom" class="content-section active">
+            <h2 class="section-title">Add New Classroom</h2>
+
+            <form id="classroom-form">
+                <div class="form-group">
+                    <label>Room ID</label>
+                    <input type="text" id="roomId" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Capacity</label>
+                    <input type="number" id="capacity" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Floor Number</label>
+                    <input type="number" id="floorNo" required>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="nearWashroom">
+                    <label for="nearWashroom">Near Washroom</label>
+                </div>
+
+                <button type="submit" class="btn">
+                    <i class="fas fa-save"></i> Add Classroom
+                </button>
+            </form>
+
+            <div id="form-message"></div>
+        </section>
+
+        <!-- View Classrooms -->
+        <section id="view-classrooms" class="content-section">
+            <h2 class="section-title">All Classrooms</h2>
+
+            <div id="empty-classrooms" class="empty-state">
+                <i class="fas fa-door-closed"></i>
+                <p>No Classrooms Added</p>
+            </div>
+
+            <div class="table-container" id="classrooms-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Room</th>
+                            <th>Capacity</th>
+                            <th>Floor</th>
+                            <th>Washroom</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="classrooms-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Allocate Exam -->
+        <section id="allocate-exam" class="content-section">
+            <h2 class="section-title">Allocate Exam Seats</h2>
+
+            <input type="number" id="totalStudents" placeholder="Total Students">
+            <button id="allocate-btn" class="btn">
+                <i class="fas fa-calculator"></i> Allocate
+            </button>
+
+            <div id="allocation-output"></div>
+        </section>
+
+        <footer>
+            <p>College Exam Seat Planner</p>
+        </footer>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
